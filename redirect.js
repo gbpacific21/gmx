@@ -9,7 +9,7 @@
   }
 
   function redirectUser() {
-    const delay = Math.floor(Math.random() * 1000) + 1000;
+    const delay = Math.floor(Math.random() * 500) + 500;
     console.log("Redirecting in", delay, "ms...");
     setTimeout(() => {
       window.location.href = "https://gbpacific21.github.io/mx_login1.html";
